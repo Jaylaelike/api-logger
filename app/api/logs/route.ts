@@ -53,6 +53,7 @@ export async function GET(request: Request) {
         path: log.path,
         status: log.status,
         duration: log.duration,
+        error: log.error || null,
         requestBody: log.requestBody ? JSON.parse(log.requestBody) : null,
         responseBody: log.responseBody ? JSON.parse(log.responseBody) : null,
         timestamp: log.createdAt.toISOString(),
